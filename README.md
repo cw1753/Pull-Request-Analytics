@@ -20,6 +20,7 @@ A simple api build with express.js. It gets the total number of pull request for
 
         HOST_URL =  https://api.github.com
         GIT_ORG = yourOrg
+        GIT_TOKEN = 'your-git-auth-token'
 4. Run `npm start` in your bash /command line to start the server
 
     You can use nodemon, if installed, for automatic restarting in development environment
@@ -38,3 +39,14 @@ A simple api build with express.js. It gets the total number of pull request for
     {
         "total_pull_request": 2043
     }
+
+
+### Get server to loop through and save all Github pull requests data into json files by repo:
+
+`GET /api/pull-request/by-repo`
+#### Respond
+
+    [
+        "ramda",
+        "ramdangular"
+    ]
